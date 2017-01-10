@@ -1,9 +1,10 @@
 package lombokLab;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.Delegate;
 
 /**
@@ -11,16 +12,16 @@ import lombok.experimental.Delegate;
  */
 @AllArgsConstructor
 @ToString
-public class Employee{
+public class Customer {
 
-    @Delegate(excludes = PersonExclusion.class)
+    @Delegate
     @Setter
     @Getter
     @JsonIgnore
     private Person person;
 
+
     @Setter
     @Getter
-    private int salary;
-
+    private String favoriteColor;
 }
