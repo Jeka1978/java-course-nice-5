@@ -5,9 +5,8 @@ package immutable;
  */
 public class Main {
     public static void main(String[] args) {
-
-        Client sabi = new Client("Sabi", 44, 64000);
-        Client client = sabi.incAge(1);
-        System.out.println("client = " + client);
+        Client.Builder builder = new Client.Builder();
+        Client moshe = builder.age(12).salary(12222).build();
+        System.out.println("moshe = " + moshe);
     }
 }
