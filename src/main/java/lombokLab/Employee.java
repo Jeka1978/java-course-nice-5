@@ -11,6 +11,7 @@ import lombok.experimental.Delegate;
  */
 @AllArgsConstructor
 @ToString
+@NoArgsConstructor
 public class Employee{
 
     @Delegate(excludes = PersonExclusion.class)

@@ -18,7 +18,7 @@ import static java.lang.Math.*;
 @Data
 @ToString
 public class Person implements Serializable {
-    private transient int id;
+    private transient int id = 23;
     private String name;
 
 

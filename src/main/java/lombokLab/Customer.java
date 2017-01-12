@@ -1,10 +1,7 @@
 package lombokLab;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.Delegate;
 
 /**
@@ -20,6 +17,9 @@ public class Customer {
     @JsonIgnore
     private Person person;
 
+    public Customer() {
+        person = new Person();
+    }
 
     @Setter
     @Getter
