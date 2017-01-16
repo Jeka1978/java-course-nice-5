@@ -1,16 +1,23 @@
 package factory;
 
+import lombok.Setter;
+
+import javax.annotation.PostConstruct;
+
 /**
  * Created by Evegeny on 12/01/2017.
  */
+@Setter
 public class IRobot {
+    @InjectByType
     private Speaker speaker;
+    @InjectByType
     private Cleaner cleaner;
 
 
-    public IRobot() throws Exception {
-        speaker = ObjectFactory.getInstance().createObject(Speaker.class);
-        cleaner = ObjectFactory.getInstance().createObject(Cleaner.class);
+    @PostConstruct
+    public void init() {
+        System.out.println(speaker.getClass());
     }
 
     public void cleanRoom() {

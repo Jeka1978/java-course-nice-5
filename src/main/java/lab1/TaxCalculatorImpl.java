@@ -13,10 +13,7 @@ import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
  */
 @Data
 public class TaxCalculatorImpl implements TaxCalculator {
-    @Delegate
-    private MaamResolver maamResolver;
-
-
+    private MaamResolver maamResolver = new MaamResolverImpl();
 
 
     public void setMaamResolver(MaamResolver maamResolver) {
@@ -32,6 +29,12 @@ public class TaxCalculatorImpl implements TaxCalculator {
         return price * maam + price;
 
 
+    }
+
+    public static void main(String[] args) {
+        TaxCalculatorImpl taxCalculator = new TaxCalculatorImpl();
+        double withMaam = taxCalculator.withMaam(100);
+        System.out.println("withMaam = " + withMaam);
     }
 }
 

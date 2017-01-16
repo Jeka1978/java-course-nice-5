@@ -10,6 +10,6 @@ public class MaamResolverImpl implements MaamResolver {
     @SneakyThrows
     public double getMaam() {
         Thread.sleep(100);
-        return 0.17;
+        return 0.18;
     }
 }

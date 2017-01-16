@@ -11,6 +11,18 @@
     <dependencies>
 
         <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.10.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.10</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.2.2</version>
@@ -43,7 +55,16 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>1.5.9</version>
+        </dependency>
+
     </dependencies>
+
 
     <build>
         <plugins>
