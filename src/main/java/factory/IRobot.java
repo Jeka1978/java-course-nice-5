@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
  * Created by Evegeny on 12/01/2017.
  */
 @Setter
+@Benchmark
 public class IRobot {
     @InjectByType
     private Speaker speaker;

@@ -7,8 +7,8 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class Main {
     public static void main(String[] args) throws InstantiationException, IllegalAccessException, InvocationTargetException {
-       /* IRobot iRobot = ObjectFactory.getInstance().createObject(IRobot.class);
-        iRobot.cleanRoom();*/
+        IRobot iRobot = ObjectFactory.getInstance().createObject(IRobot.class);
+        iRobot.cleanRoom();
         MyService myService = ObjectFactory.getInstance().createObject(MyService.class);
         myService.doWork();
         myService.drinkBeer();
